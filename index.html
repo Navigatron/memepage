@@ -6,64 +6,13 @@
     <script>
         //Why you lookin' at my source code, fool?
         //When the document is ready...
-        $(document).ready(function(){
-            var folder = "memes/";//Declare memes
-            console.log('meme-ing...');
-            $.ajax({//Prepare to get memes
-            url : folder,//Where to get memes
-            success: function (data) {//When we got memes
-                console.log('Complete! 10/10 would meme again');
-                $(data).find("a").attr("href", function (i, val) {//Go through every meme
-                    if( val.match(/\.(jpe?g|png|gif)$/) ) {//Make sure it's a meme
-                        $("#memes").append( "<img src='"+ folder + val +"'>" );//Put it on the webpage ;)
-                    }
-                });
-            }
-            });
-        });//*/
-        $("#uploadTrigger").click(function(){//So we can hide the default select button. it's ugly.
-           $("#uploadFile").click();
-        });
+        $(document).ready(function(){});
     </script>
-    <style>
-    .hidden {
-        display:none;
-    }
-    .button {
-        border: 1px solid #333;
-        padding: 10px;
-        margin: 5px;
-        background: #777;
-        color: #fff;
-        /*! width:75px; */
-        display: inline-block;
-        height: 100%;
-        font-family: sans-serif;
-    }
-
-    .button:hover {
-        background: #333;
-        cursor: pointer;
-    }
-    body{
-        text-align: center;
-    }
-    img{
-        max-width: 100%;
-    }
     </style>
 </head>
 <body>
     <h1>Memes</h1>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="fileToUpload" class="hidden" id="uploadFile">
-        <div class="button" id="uploadTrigger">Select Meme</div>
-        <input type="submit" value="Upload Meme" name="submit" class="button">
-    </form>
     <div id='memes'>
     </div>
-    <p>Oh Noes! You're out of memes :(<br/>
-    Go take a picture of something funny and upload it.<br/>
-NOW. It's not an option.</p>
 </body>
 </html>
