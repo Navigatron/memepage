@@ -7,6 +7,7 @@ $server='127.0.0.1';
 $username='root';
 $password='mysjavatech98';
 echo "Connecting...";
+phpinfo();
 //Create the Connection;
 $DatabaseConnection = new mysqli($server, $username, $password);
 echo "Connected!";
