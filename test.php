@@ -1,21 +1,4 @@
 <?php
-ini_set('display_errors', 'On');
-error_reporting(E_ALL | E_STRICT);
-//Gimme dat database!!!
-echo "Welcome to the Test!";
-$server='127.0.0.1';
-$username='root';
-$password='mysjavatech98';
-echo "Connecting...";
-phpinfo();
-//Create the Connection;
-$DatabaseConnection = new mysqli($server, $username, $password);
-echo "Connected!";
-//Make sure no connection errors
-if($DatabaseConnection->connect_error){
-    echo "Database Error: ".$DatabaseConnection->connect_error;
-    die("Connection Error: ".$DatabaseConnection->connect_error);
-}
-echo "Connected to the database!";
-
- ?>
+require_once("php/ReportErrors.php");
+require_once("php/ConnectToDatabase.php");
+echo "All systems Go";
