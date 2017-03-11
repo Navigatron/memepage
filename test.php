@@ -1,6 +1,6 @@
 <?php
 //Gimme dat database!!!
-
+echo "Welcome to the Test!";
 $server='127.0.0.1';
 $username='root';
 $password='mysjavatech98';
