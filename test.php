@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL | E_STRICT);
 //Gimme dat database!!!
 echo "Welcome to the Test!";
 $server='127.0.0.1';
