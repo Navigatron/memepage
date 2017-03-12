@@ -5,7 +5,8 @@
     <script src='js/jquery.js'></script>
 </head>
 <body>
-    <div id="body">
+    <?php include(dirname(__DIR__)."/html/php/header.php");?>
+    <div id="body" class='card'>
         <?php
         include(dirname(__DIR__)."/html/php/ReportErrors.php");
         echo 'About to IF';
