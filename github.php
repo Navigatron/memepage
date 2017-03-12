@@ -13,7 +13,7 @@
         echo 'declaring function...';
         function log($text){
             echo $text.'<br/>';
-        }
+        }/*
         echo 'Calling function...';
         log('Handling...');
         echo 'Whats wrong?;
