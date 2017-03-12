@@ -8,15 +8,23 @@
     <?php include(dirname(__DIR__)."/html/php/header.php");?>
     <div id="body" class='card'>
         <?php
+        echo 'Including error reporting...';
         include(dirname(__DIR__)."/html/php/ReportErrors.php");
+        echo 'declaring function...';
         function log($text){
             echo $text.'<br/>';
         }
+        echo 'Calling function...';
         log('Handling...');
+        echo 'Whats wrong?;
         if(isset($_GET['pull'])){
             log('pull is set!');
         } else {
             log('pull is Not set :(');
+            log('');
+            log('Status:');
+            log('');
+            log(shell_exec('git status'));
         }
         if (isset($_GET['pull']) && $_GET['pull']=='true') {
             log('Pull is set to true, Pulling!');
