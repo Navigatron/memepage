@@ -8,14 +8,14 @@
     <div id="body">
         <?php
         include(dirname(__DIR__)."/html/php/ReportErrors.php");
-        echo 'About to IF';/*
-        if(isset(_GET['pull'])){
+        echo 'About to IF';
+        if(isset($_GET['pull'])){
             echo ', _GET[pull] is set';
-            echo ', it is equal to '._GET['pull'];
+            echo ', it is equal to '.$_GET['pull'];
         } else {
             echo ', get is not set!';
         }
-        if (isset(_GET['pull']) && _GET['pull']==true) {
+        if (isset($_GET['pull']) && $_GET['pull']=='true') {
             echo ', I hear you!';
         }//*/
          ?>
