@@ -26,11 +26,11 @@
             log('');
             log('Fetching changes:');
             log('');
-            log(shell_exec('git fetch'));
+            log(shell_exec('git fetch 2>&1'));
             log('');
             log('Merging Changes:');
             log('');
-            log(shell_exec('git merge'));
+            log(shell_exec('git merge 2>&1'));
             log('');
             log('Status after pull: ');
             log('');
