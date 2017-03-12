@@ -32,19 +32,19 @@
             }elseif ($_GET['action']=='pull') {
                 leg('Action is set to Pull!');
                 leg('');
-                leg('Status before pull:');
-                leg('');
-                leg(shell_exec('git status'));
-                leg('');
                 leg('Fetching changes:');
                 leg('');
                 leg(shell_exec('git fetch 2>&1'));
+                leg('');
+                leg('Status:');
+                leg('');
+                leg(shell_exec('git status'));
                 leg('');
                 leg('Merging Changes:');
                 leg('');
                 leg(shell_exec('git merge 2>&1'));
                 leg('');
-                leg('Status after pull: ');
+                leg('Final status: ');
                 leg('');
                 leg(shell_exec('git status'));
             }else{
