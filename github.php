@@ -37,6 +37,7 @@
             log(shell_exec('git status'));
 
         }//*/
+        //Pointless change to test git system
          ?>
         <button id='github'>Pull</button>
         <script>
