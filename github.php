@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
 <head>
-    <?php include(dirname(__DIR__)."/html/php/head.php");?>
+    <?php include(dirname(__DIR__)."/html/php/head.php");
+    include(dirname(__DIR__)."/html/php/ReportErrors.php"); ?>
     <script src='js/jquery.js'></script>
 </head>
 <body>
