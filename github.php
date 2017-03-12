@@ -8,7 +8,7 @@
     <div id="body">
         <button id='github' value="Pull!"></button>
         <script>
-        $('#github').onclick(function(e){
+        $('#github').on('click', function(e){
             console.log('Hello world!');
         });
         </script>
