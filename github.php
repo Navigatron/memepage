@@ -8,9 +8,10 @@
 <body>
     <div id="body">
         <?php
+        /*
         if (isset(_GET['pull']) && _GET['pull']==true) {
             echo 'I hear you!';
-        }
+        }//*/
          ?>
         <button id='github'>Pull</button>
         <script>
