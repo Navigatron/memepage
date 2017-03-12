@@ -36,13 +36,9 @@
                 leg('');
                 leg(shell_exec('git status'));
                 leg('');
-                leg('Fetching changes:');
+                leg('Pulling changes:');
                 leg('');
-                leg(shell_exec('git fetch 2>&1'));
-                leg('');
-                leg('Merging Changes:');
-                leg('');
-                leg(shell_exec('git merge 2>&1'));
+                leg(shell_exec('git pull 2>&1'));
                 leg('');
                 leg('Status after pull: ');
                 leg('');
