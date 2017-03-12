@@ -17,6 +17,7 @@
         }
         if (isset($_GET['pull']) && $_GET['pull']=='true') {
             echo ', I hear you!';
+            echo shell_exec('git status');
         }//*/
          ?>
         <button id='github'>Pull</button>
