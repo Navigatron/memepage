@@ -60,11 +60,11 @@
         <button id='pull'>Pull</button>
         <script>
         $('#status').on('click', function(e){
-            console.leg('Hreffing...');
+            console.log('Hreffing...');
             window.location.href = 'http://jeretho.zzzz.io/github.php?action=status';
         });
         $('#pull').on('click', function(e){
-            console.leg('Hreffing...');
+            console.log('Hreffing...');
             window.location.href = 'http://jeretho.zzzz.io/github.php?action=pull';
         });
         </script>
