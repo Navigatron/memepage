@@ -6,10 +6,15 @@
 </head>
 <body>
     <div id="body">
-        <button id='github' value="Pull!"></button>
+        <?php
+        if (isset(_GET['pull']) && _GET['pull']==true) {
+            echo 'I hear you!';
+        }
+         ?>
+        <button id='github'>Pull</button>
         <script>
         $('#github').on('click', function(e){
-            console.log('Hello world!');
+            $.get('http://jeretho.zzzz.io/github.php?pull=true');
         });
         </script>
     </div>
