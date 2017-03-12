@@ -9,22 +9,33 @@
     <div id="body" class='card'>
         <?php
         include(dirname(__DIR__)."/html/php/ReportErrors.php");
-        echo 'About to IF';
+        function log($text){
+            echo $text.'<br/>';
+        }
+        log('Handling...');
         if(isset($_GET['pull'])){
-            echo ', _GET[pull] is set';
-            echo ', it is equal to '.$_GET['pull'];
+            log('pull is set!');
         } else {
-            echo ', get is not set!';
+            log('pull is Not set :(');
         }
         if (isset($_GET['pull']) && $_GET['pull']=='true') {
-            echo ', I hear you!<br/><br/>Git status:<br/>';
-            echo shell_exec('git status');
-            echo '<br/>Git fetch:<br/>';
-            echo shell_exec('git fetch');
-            echo '<br/>Git pull:<br/>';
-            echo shell_exec('git pull');
-            echo '<br/>Git status:<br/>';
-            echo shell_exec('git status');
+            log('Pull is set to true, Pulling!');
+            log('Status before pull:');
+            log('');
+            log(shell_exec('git status'));
+            log('');
+            log('Fetching changes:');
+            log('');
+            log(shell_exec('git fetch'));
+            log('');
+            log('Merging Changes:');
+            log('');
+            log(shell_exec('git merge'));
+            log('');
+            log('Status after pull: ');
+            log('');
+            log(shell_exec('git status'));
+
         }//*/
          ?>
         <button id='github'>Pull</button>
