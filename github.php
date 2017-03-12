@@ -16,7 +16,7 @@
         <button id='github'>Pull</button>
         <script>
         $('#github').on('click', function(e){
-            $.get('http://jeretho.zzzz.io/github.php?pull=true');
+            window.href = 'http://jeretho.zzzz.io/github.php?pull=true';
         });
         </script>
     </div>
