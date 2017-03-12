@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <meta charset="UTF-8">
+    <?php include(dirname(__DIR__)."/html/php/head.php");?>
 </head>
 <body>
     <!--Header-->
