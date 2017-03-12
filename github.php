@@ -17,13 +17,14 @@
             echo ', get is not set!';
         }
         if (isset($_GET['pull']) && $_GET['pull']=='true') {
-            echo ', I hear you!<br/><br/>';
+            echo ', I hear you!<br/><br/>Git status:<br/>';
             echo shell_exec('git status');
-            echo '<br/><br/>';
+            echo '<br/>Git fetch:<br/>';
+            echo shell_exec('git fetch');
+            echo '<br/>Git pull:<br/>';
             echo shell_exec('git pull');
-            echo '<br/><br/>';
+            echo '<br/>Git status:<br/>';
             echo shell_exec('git status');
-            echo '<br/><br/>';
         }//*/
          ?>
         <button id='github'>Pull</button>
