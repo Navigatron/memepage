@@ -11,7 +11,7 @@
         echo 'Including error reporting...';
         include(dirname(__DIR__)."/html/php/ReportErrors.php");
         echo 'declaring function...';
-        function log($text){
+        function leg($text){
             echo $text.'<br/>';
         }/*
         echo 'Calling function...';
