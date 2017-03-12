@@ -6,9 +6,9 @@
 </head>
 <body>
     <div id="body">
-        <?php        
+        <?php
         include(dirname(__DIR__)."/html/php/ReportErrors.php");
-        echo 'About to IF';
+        echo 'About to IF';/*
         if(isset(_GET['pull'])){
             echo ', _GET[pull] is set';
             echo ', it is equal to '._GET['pull'];
