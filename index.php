@@ -2,6 +2,7 @@
 
 <head>
     <?php include(dirname(__DIR__)."/html/php/head.php");?>
+    <script src='js/jquery.js'></script>
 </head>
 <body>
     <!--Header-->
@@ -22,8 +23,9 @@
         <!--Upload Meme-->
         <div class="card">
             <span>Your meme here!</span>
-            <input type="file"></input>
-            <input type='button' value="upload"></input>
+            <input type="file" id='file'></input>
+            <input type='button' id='upload' value="upload"></input>
+            <script src='js/upload.js'></script>
             <span id='UploadMessage'></span>
         </div>
         <!--Memes-->
