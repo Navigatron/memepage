@@ -22,7 +22,9 @@
         <!--Upload Meme-->
         <div class="card">
             <span>Your meme here!</span>
-            <span>TODO - upload meme form</span>
+            <input type="file"></input>
+            <input type='button' value="upload"></input>
+            <span id='UploadMessage'></span>
         </div>
         <!--Memes-->
     </div>
