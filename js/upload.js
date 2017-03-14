@@ -22,8 +22,7 @@ $('#upload').on('click', function(e){
         if (xhr.status === 200) {
             // File(s) uploaded.
             console.log('All systems go!');
-            alert('response: '+xhr.response);
-            alert('text: '+xhr.responseText);
+            $('#uploadMessage').html(xhr.responseText);
         } else {
             alert('An error occurred!');
         }
