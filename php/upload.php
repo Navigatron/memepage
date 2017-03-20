@@ -36,5 +36,5 @@ if($file['size'] > 1000000){
     echo 'file size: '.$file['size'];
 }
 
-echo 'Success! Putting file in le DB!';
+echo 'Success!';
  ?>
