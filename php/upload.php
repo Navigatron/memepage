@@ -15,7 +15,7 @@ echo 'File is named \''.$file['name'].'\', and is '.$file['size'].' bytes in siz
 
 //Verification
 //File MIME-type
-switch(mime_content_type($file)){
+switch(mime_content_type($file['name'])){
     case 'image/jpeg':
         echo 'Got a jpeg!';
         break;
@@ -29,7 +29,7 @@ switch(mime_content_type($file)){
         echo 'Got a tiff!';
         break;
     default:
-        echo 'Not supported filetype!';
+        echo 'Not supported filetype: '+mime_content_type($file['name']);
         return;
         break;
 }
