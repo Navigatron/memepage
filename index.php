@@ -13,15 +13,13 @@
             <div class="line">
                 <span>Currently displaying memes by freshness</span>
             </div>
-            <div class="line">
-                <span>TODO - show me the freshest memes</span>
-            </div>
-            <div class="line">
-                <span>TODO - show me the spiciest memes</span>
-            </div>
+        </div>
+        <!--Captcha verification-->
+        <div id='captchaBlock' style='display: none;'>
+            <span>TODO: Captcha unlock</span>
         </div>
         <!--Upload Meme-->
-        <div class="card">
+        <div class="card" style='display: block;'>
             <span>Your meme here!</span>
             <input type="file" id='file'></input>
             <input type='button' id='upload' value="upload"></input>
