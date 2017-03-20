@@ -10,6 +10,7 @@ $('#upload').on('click', function(e){
     // Check the file type.
     if (!file.type.match('image.*')) {
         console.log('That\'s not an image file :(');
+        $('#UploadMessage').text(file.name+' -> '+'Uploading... -> Unsupported file type :(');
         return;
     }
     // Add the file to the request.
@@ -24,7 +25,7 @@ $('#upload').on('click', function(e){
         if (xhr.status === 200) {
             // File(s) uploaded.
             console.log('All systems go!');
-            $('#UploadMessage').text(file.name+' -> '+xhr.responseText);
+            $('#UploadMessage').text(file.name+' -> Uploading... -> '+xhr.responseText);
         } else {
             alert('An error occurred!');
         }
