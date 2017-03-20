@@ -5,14 +5,14 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-//*
+/*
 echo 'Printing ALL keys!<br/>';
 $arr = get_defined_vars();
 print_r($arr);//*/
 
 $file = $_FILES['file'];
 echo 'File is named \''.$file['name'].'\', and is '.$file['size'].' bytes in size.';
-return;
+
 //Verification
 //File MIME-type
 switch(mime_content_type($file)){
