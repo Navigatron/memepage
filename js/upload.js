@@ -5,7 +5,7 @@ $('#upload').on('click', function(e){
     var formData = new FormData();
     var file = $('#file')[0].files[0];
 
-    $('#UploadMessage').text(file+' -> '+'Uploading...');
+    $('#UploadMessage').text(file.name+' -> '+'Uploading...');
 
     // Check the file type.
     if (!file.type.match('image.*')) {
@@ -24,7 +24,7 @@ $('#upload').on('click', function(e){
         if (xhr.status === 200) {
             // File(s) uploaded.
             console.log('All systems go!');
-            $('#UploadMessage').text(file+' -> '+xhr.responseText);
+            $('#UploadMessage').text(file.name+' -> '+xhr.responseText);
         } else {
             alert('An error occurred!');
         }
