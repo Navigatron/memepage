@@ -8,12 +8,11 @@ error_reporting(E_ALL);
 //*
 echo 'Printing ALL keys!<br/>';
 $arr = get_defined_vars();
-print_r($arr);
-echo '<br/>';//*/
-return;
+print_r($arr);//*/
+
 $file = $_FILE['file'];
 echo 'File is named \''.$file['name'].'\', and is '.$file['size'].' bytes in size.';
-
+return;
 //Verification
 //File MIME-type
 switch(mime_content_type($file)){
