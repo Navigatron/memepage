@@ -6,7 +6,7 @@ echo 'All systems Go';
 
 $sql = "SELECT * FROM memestreme";
 $result = $DatabaseConnection->query($sql);
-
+print_r($result);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
