@@ -1,6 +1,6 @@
 <?php
 //GGRRRRRR
-$debug = true;
+$debug = false;
 $file = $_FILES['file'];
 $mimeType = mime_content_type($file['tmp_name']);
 
@@ -49,12 +49,12 @@ $sql = "SELECT LAST_INSERT_ID()";
 $result = $DatabaseConnection->query($sql);
 
 $newFileName = 'FailureRetreivingLastInsertedKeySeeUploadPHP50';
+$newFileName = "DOYOUWANTFUCKINGDOUBLEQUOTESORSOMESHIT";
 $newFileExtension = end((explode(".", $file['name'])));
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    print_r($row);
-    $newFileName = $row["id"];//This is apparently undefined.
+    $newFileName = $row["LAST_INSERT_ID()"];//Thought it would be id, thought wrong.
 } else {
     //Something really went wrong here.
     echo "Failure to determine height of meme pile.";
