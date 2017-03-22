@@ -36,5 +36,37 @@ if($file['size'] > 1000000){
     echo 'file size: '.$file['size'];
 }
 
-echo 'Success!';
+//Add the file to the database, get the files new name
+require_once(ROOT.'ConnectToDatabase.php');
+
+//Add to database
+$sql = "INSERT INTO media (id) VALUES (null)";//Auto-increments primary key
+$DatabaseConnection->query($sql);
+
+//get name
+$sql = "SELECT LAST_INSERT_ID()";
+$result = $DatabaseConnection->query($sql);
+
+$newFileName = 'FailureRetreivingLastInsertedKeySeeUploadPHP50';
+$newFileExtension = end((explode(".", $file['name'])));
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $newFileName = $row["id"];
+} else {
+    //Something really went wrong here.
+    echo "Failure to determine height of meme pile.";
+    return;
+}
+
+//Save to upload directory
+define('ROOT', dirname(__DIR__).'/html');
+$uploadDirectory = ROOT.'/media';
+if(move_uploaded_file($file['tmp_name'], $uploadDirectory.'/'.$newFileName.'.'.$newFileExtension)){
+    echo 'Success!';
+}else{
+    echo 'Failure adding image to meme pile.';
+}
+
+
  ?>
