@@ -37,7 +37,7 @@ if($file['size'] > 1000000){
 }
 
 //Add the file to the database, get the files new name
-define('PHPROOT', dirname(__DIR__).'/html/php/');
+define('PHPROOT', dirname(__DIR__).'/php/');
 require_once(PHPROOT.'ConnectToDatabase.php');
 
 //Add to database
@@ -61,9 +61,9 @@ if ($result->num_rows > 0) {
 }
 
 //Save to upload directory
-define('ROOT', dirname(__DIR__).'/html');
-$uploadDirectory = ROOT.'/media';
-if(move_uploaded_file($file['tmp_name'], $uploadDirectory.'/'.$newFileName.'.'.$newFileExtension)){
+define('ROOT', dirname(__DIR__).'/');
+$uploadDirectory = ROOT.'media/';
+if(move_uploaded_file($file['tmp_name'], $uploadDirectory.$newFileName.'.'.$newFileExtension)){
     echo 'Success!';
 }else{
     echo 'Failure adding image to meme pile.';
