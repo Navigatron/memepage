@@ -27,7 +27,8 @@ $('#upload').on('click', function(e){
             console.log('All systems go!');
             $('#UploadMessage').text(file.name+' -> Uploading... -> '+xhr.responseText);
         } else {
-            alert('An error occurred!');
+            alert('POST failure. Code: '+xhr.status);
+            $('#UploadMessage').text(file.name+' -> Uploading... -> '+'POST request failure.');
         }
     };
     xhr.send(formData);
