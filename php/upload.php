@@ -1,6 +1,6 @@
 <?php
 //GGRRRRRR
-$debug = false;
+$debug = true;
 $file = $_FILES['file'];
 $mimeType = mime_content_type($file['tmp_name']);
 
