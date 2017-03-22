@@ -53,7 +53,8 @@ $newFileExtension = end((explode(".", $file['name'])));
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $newFileName = $row["id"];
+    print_r($row);
+    $newFileName = $row["id"];//This is apparently undefined.
 } else {
     //Something really went wrong here.
     echo "Failure to determine height of meme pile.";
