@@ -37,7 +37,8 @@ if($file['size'] > 1000000){
 }
 
 //Add the file to the database, get the files new name
-require_once(ROOT.'ConnectToDatabase.php');
+define('PHPROOT', dirname(__DIR__).'/html/php/');
+require_once(PHPROOT.'ConnectToDatabase.php');
 
 //Add to database
 $sql = "INSERT INTO media (id) VALUES (null)";//Auto-increments primary key
