@@ -4,7 +4,10 @@ require_once(ROOT.'ReportErrors.php');
 require_once(ROOT.'ConnectToDatabase.php');
 echo 'All systems Go';
 
-$sql = "SELECT * FROM memestreme";
+//test has two test rows, index and a string
+//media has nothing in it right now, It'll have indexes later on.
+
+$sql = "SELECT * FROM media";
 $result = $DatabaseConnection->query($sql);
 print_r($result);
 if ($result->num_rows > 0) {
