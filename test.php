@@ -4,7 +4,7 @@ require_once(ROOT.'ReportErrors.php');
 require_once(ROOT.'ConnectToDatabase.php');
 echo 'All systems Go';
 
-$sql = "SELECT * FROM test";
+$sql = "SELECT * FROM memestreme";
 $result = $DatabaseConnection->query($sql);
 
 if ($result->num_rows > 0) {
