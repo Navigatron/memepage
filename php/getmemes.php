@@ -29,6 +29,7 @@ if ($result->num_rows > 0) {
     }
 } else {
     //Send back an empty array.
+    echo 'No results!';
 }
 
 //I guess that's it.
