@@ -1,15 +1,17 @@
+var smallestIndex = 0;//Represents the oldest meme. Passed to the server to get older memes.
+
 $(document).ready(function(){
     //Automatically load 20 memes.
-    loadmemes();
+    loadmemes(smallestIndex);
 });
 
-var smallestIndex = 0;
 
-var loadmemes = function(){
+
+var loadmemes = function(index){
     //Firstly, get the meme file names from the server.
     //POST REQUEST.
     var formData = new FormData();
-    formData.append('index', smallestIndex);
+    formData.append('index', index);
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'php/getmemes.php', true);
     xhr.onload = function () {

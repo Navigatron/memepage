@@ -23,8 +23,11 @@ $('#upload').on('click', function(e){
     xhr.onload = function () {
         if (xhr.status === 200) {
             // File(s) uploaded.
-            console.log('All systems go!');
+            //console.log('All systems go!');
             $('#UploadMessage').text($('#UploadMessage').text()+xhr.responseText);
+            //Clear loaded memes, re-load memes.
+            $('#memes').empty();
+            loadmemes();
         } else {
             alert('POST failure. Code: '+xhr.status);
             $('#UploadMessage').text($('#UploadMessage').text()+'POST request failure.');
