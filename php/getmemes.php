@@ -18,18 +18,19 @@ if($index==0){
 require_once(PHPROOT.'ConnectToDatabase.php');
 $result = $DatabaseConnection->query($sql);
 $names = array();
-print_r(get_defined_vars());
+//print_r(get_defined_vars());
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {//WHERE THE KEYS FOR ROW ARE THE COLUMN NAMES
         $glob = glob(dirname(__DIR__).'/media/'.$row['id'].'.*');
-        print_r(get_defined_vars());
+        //print_r(get_defined_vars());
         if(sizeof($glob)!=1){
             //Found more or less than one matching file.
             file_put_contents(dirname(__DIR__).'/log.txt', 'Search for file '.$row['id'].' returned '.sizeof($glob).' results.', FILE_APPEND);
             continue;
         }else{
             //There is one file matching one database entry. SHIP IT!
-            $names = $glob[0];
+            //Break the file path into pieces. return media/(The last piece.)
+            $names[] = 'media/'.end(explode('/',$glob[0]));
         }
     }
 } else {
@@ -38,8 +39,8 @@ if ($result->num_rows > 0) {
 }
 
 //I guess that's it.
-print_r(get_defined_vars());
+//print_r(get_defined_vars());
 $DatabaseConnection->close();
-return json_encode($names);
+return json_encode($names, JSON_FORCE_OBJECT);
 
  ?>
