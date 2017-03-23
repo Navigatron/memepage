@@ -1,4 +1,6 @@
 <?php
+define('PHPROOT', dirname(__DIR__).'/php/');
+require_once(PHPROOT.'ReportErrors.php');
 if(!isset($_POST['index'])){
     $arr = get_defined_vars();
     print_r($arr);
@@ -11,7 +13,7 @@ if($index==0){
 }else{
     $sql = 'SELECT * FROM media WHERE id<$index ORDER BY id DESC LIMIT 20';
 }
-define('PHPROOT', dirname(__DIR__).'/php/');
+
 require_once(PHPROOT.'ConnectToDatabase.php');
 $result = $DatabaseConnection->query($sql);
 $names = array();
