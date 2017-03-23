@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
         }else{
             //There is one file matching one database entry. SHIP IT!
             //Break the file path into pieces. return media/(The last piece.)
-            $names[] = 'media/'.end(explode('/',$glob[0]));
+            $names[] = 'media/'.end((explode('/',$glob[0])));//More ()'s?'
         }
     }
 } else {
