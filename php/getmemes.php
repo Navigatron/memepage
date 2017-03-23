@@ -1,5 +1,5 @@
 <?php
-if(!defined($_POST['index'])){
+if(!isset($_POST['index'])){
     $arr = get_defined_vars();
     print_r($arr);
     echo '<br/>Lol';
