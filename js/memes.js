@@ -30,6 +30,6 @@ var loadmemes = function(){
 var injectMemes = function(names){//As JQuery
     for (var key in names) {
         console.log('Got a name: '+names[key]);
-        $('#memes').append('<img src=\''+names+'\'></img>');
+        $('#memes').append('<img src=\''+names[key]+'\'></img>');
     }
 }
