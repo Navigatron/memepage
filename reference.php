@@ -3,10 +3,10 @@ echo 'This isnt for you.';
 return;
 
 //DEFINE ROOT
-define('ROOT', dirname(__DIR__).'/html/php/');
+define('PHPROOT', dirname(__DIR__).'/php/');
 
 //ENABLE ERROR REPORTING
-require_once(ROOT.'ReportErrors.php');
+require_once(PHPROOT.'ReportErrors.php');
 
 //PRINT ABSOLUTELY EVERYTHING.
 $arr = get_defined_vars();
@@ -17,7 +17,7 @@ print_r($arr);
 ////DATABASES
 
 //CONNECT TO THE DATABASE
-require_once(ROOT.'ConnectToDatabase.php');
+require_once(PHPROOT.'ConnectToDatabase.php');
 
 //QUERIES
 //SELECT DATA
@@ -39,6 +39,15 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
+
+// Don't you (dodo-dodooooo) Forget about me
+// ........##.........
+// ........##.........
+// ........##.........
+// ........##.........
+// ...#############...
+// ......#######......
+// ........##.........
 
 //CLOSE THE DATABASE CONNECTION
 $DatabaseConnection->close();

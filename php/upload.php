@@ -1,5 +1,4 @@
 <?php
-//GGRRRRRR4
 $debug = false;
 $file = $_FILES['file'];
 $mimeType = mime_content_type($file['tmp_name']);
@@ -47,9 +46,9 @@ $DatabaseConnection->query($sql);
 //get name
 $sql = "SELECT LAST_INSERT_ID()";
 $result = $DatabaseConnection->query($sql);
+$DatabaseConnection->close();
 
-$newFileName = 'FailureRetreivingLastInsertedKeySeeUploadPHP50';
-$newFileName = "DOYOUWANTFUCKINGDOUBLEQUOTESORSOMESHIT";
+$newFileName = 'FailureRetreivingLastInsertedKeySeeUploadPHP51';
 $newFileExtension = end((explode(".", $file['name'])));
 
 if ($result->num_rows > 0) {

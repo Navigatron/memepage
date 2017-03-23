@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
     <?php include(dirname(__DIR__)."/html/php/head.php");?>
     <script src='js/jquery.js'></script>
@@ -27,6 +26,10 @@
             <span id='UploadMessage'></span>
         </div>
         <!--Memes-->
+        <div id='memes'>
+            <script src='js/memes.js'></script>
+            <!--Script auto-puts in the memes.-->
+        </div>
     </div>
 </body>
 </html>
