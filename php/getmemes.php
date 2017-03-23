@@ -39,7 +39,8 @@ if ($result->num_rows > 0) {
 }
 
 //I guess that's it.
-//print_r(get_defined_vars());
+$result = json_encode($names, JSON_FORCE_OBJECT);
+print_r(get_defined_vars());
 $DatabaseConnection->close();
 return json_encode($names, JSON_FORCE_OBJECT);
 
