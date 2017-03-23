@@ -15,7 +15,7 @@ var loadmemes = function(){
     xhr.onload = function () {
         if (xhr.status === 200) {
             var names = xhr.responseText;
-            $('#memes').append('<span>'+names+'</span>');
+            //$('#memes').append('<span>'+names+'</span>');
             //K, now inject memes.
             injectMemes(jQuery.parseJSON(names));
         } else {

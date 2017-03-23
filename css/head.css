@@ -9,4 +9,16 @@ body{
     background-color: white;
     max-width: 95%;
     margin: 20px;
+    text-align: center;
+    padding: 10px;
+}
+img{
+    max-width: 95%;
+    max-height: 95vh;
+    display: block;
+    margin: 10px auto;
+}
+span{
+    display: block;
+    margin: 5px;
 }
