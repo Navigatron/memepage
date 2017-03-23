@@ -28,10 +28,8 @@ var loadmemes = function(){
 }
 
 var injectMemes = function(names){//As JQuery
-    for (var i = 0; i < array.length; i++) {
-        array[i]
-    }
     for (var key in names) {
         console.log('Got a name: '+names[key]);
+        $('#memes').append('<img src=\''+names+'></img>');
     }
 }
