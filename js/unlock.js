@@ -1,5 +1,6 @@
 //We need to get the captcha code and send it to the server.
 //If the server is pleased, show the user the upload and vote features.
+var voting = false;
 $(document).ready(function(){
     $('#captchaForm').submit(function(event){
         //Don't actually submit the form.
@@ -24,10 +25,10 @@ $(document).ready(function(){
                     //Hello human!
                     //Server has given human a cookie. Good human.
                     //Here, have some upload and vote divs.
-                    alert('Good hooman!');
+                    unlock();
                 }else{
                     //Go away robbit :(
-                    alert('Go away robbit :( Google sayz '+xhr.responseText);
+                    $('#captchaFeedback').text('Google sayz u r an robbit :(');
                 }
             } else {
                 alert('POST failure. Code: '+xhr.status);
@@ -38,4 +39,10 @@ $(document).ready(function(){
         //Even more not submitting the form.
         return false;
     });
+    var unlock = function(){
+        //Dear 1337 H4X0RZ, Just wanna let you know, uploading and voting don't work without the cookie from actually doing the captcha. ;)
+        $('#captchaBlock').hide();
+        $('#uploadBlock').show();
+        $('.voteBar').each().show();
+    }
 });

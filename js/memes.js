@@ -29,9 +29,12 @@ var loadmemes = function(index){
     //$('#memes').append('<span>That\'s it.</span>');
 }
 
-var injectMemes = function(names){//As JQuery
+var injectMemes = function(names){//As JSON
     for (var key in names) {
-        console.log('Got a name: '+names[key]);
-        $('#memes').append('<img src=\''+names[key]+'\'></img>');
+        var hide = '';
+        if(!voting){
+            hide = " style='display: none;'";
+        }
+        $('#memes').append('<div><img src='+names[key]+'\'></img><div class=\'voteBar\''+hide+'></div></div>');
     }
 }

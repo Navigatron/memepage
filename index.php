@@ -33,7 +33,7 @@
             </form>
         </div>
         <!--Upload Meme - Unlocked by Captcha verification-->
-        <div id='uploadBlock' class="card" style='display: block;'>
+        <div id='uploadBlock' class="card" style='display: none;'>
             <span>Your meme here!</span>
             <input type='button' id='upload' value="upload"></input>
             <input type="file" id='file'></input>
