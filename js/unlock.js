@@ -24,8 +24,10 @@ $(document).ready(function(){
                     //Hello human!
                     //Server has given human a cookie. Good human.
                     //Here, have some upload and vote divs.
+                    alert('Good hooman!');
                 }else{
                     //Go away robbit :(
+                    alert('Go away robbit :( Google sayz '+xhr.responseText);
                 }
             } else {
                 alert('POST failure. Code: '+xhr.status);
