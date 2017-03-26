@@ -9,12 +9,12 @@ $(document).ready(function(){
 
         if(code.length <= 0){
             //Silly user, you need to fill out the captcha.
-            $('#captchaFeedback').val('You need to do the captcha before you click this.');
+            $('#captchaFeedback').text('You need to do the captcha before you click this.');
             return false;
         }
 
         var formData = new FormData();
-        formData.append('code', code);
+        formData.append('g-recaptcha-response', code);
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'php/unlock.php', true);
         xhr.onload = function () {
