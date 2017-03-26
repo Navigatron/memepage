@@ -18,17 +18,17 @@
         </div>
         <!--Captcha verification-->
         <div id='captchaBlock' class="card">
-            <form class="form" action="index.php" method="post">
+            <form id="captchaForm" class="form" action="index.php" method="post">
                 <div class="g-recaptcha" data-sitekey="6Lc4QxoUAAAAALrigh2xUtSNbOXXg7N_k1WB8dzR"></div>
                 <input type="submit" name="submit" value="Unlock Voting and Uploading">
                 <!--Need the submit system firing. GetCookie verifies captcha, CheckCookie will...? -->
             </form>
         </div>
         <!--Upload Meme-->
-        <div id='uploadBlock' class="card" style='display: none;'>
+        <div id='uploadBlock' class="card" style='display: block;'>
             <span>Your meme here!</span>
-            <input type="file" id='file'></input>
             <input type='button' id='upload' value="upload"></input>
+            <input type="file" id='file'></input>
             <script src='js/upload.js'></script>
             <span id='UploadMessage'></span>
         </div>

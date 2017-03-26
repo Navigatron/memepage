@@ -9,6 +9,11 @@ span{
     display: block;
     margin: 5px;
 }
-form{
+#captchaForm{
     display: inline-block;
+    padding: 10px;
+}
+#captchaForm input{
+    margin-top: 15px;
+    padding: 5px 20px;
 }
