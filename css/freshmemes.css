@@ -17,3 +17,6 @@ span{
     margin-top: 15px;
     padding: 5px 20px;
 }
+#uploadBlock input[type='button']{
+    padding: 1px 10px;
+}

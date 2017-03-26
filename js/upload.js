@@ -25,6 +25,9 @@ $('#upload').on('click', function(e){
             // File(s) uploaded.
             //console.log('All systems go!');
             $('#UploadMessage').text($('#UploadMessage').text()+xhr.responseText);
+            //Clear file button - taken right from stack overflow.
+            var control = $('#file');
+            control.replaceWith( control = control.clone( true ) );
             //Clear loaded memes, re-load memes.
             $('#memes').empty();
             loadmemes();
