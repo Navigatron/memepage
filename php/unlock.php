@@ -14,6 +14,7 @@ if(sizeof($captcha)<1){
     echo'false';
 }
 $response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6Lc4QxoUAAAAAG8vwXuI-2uS0PYepUXcSK5XRDOL&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
+print_r(get_defined_vars());
 if($response['success'] == false){
     //No verify, because FAKED captcha!
     echo 'false';
