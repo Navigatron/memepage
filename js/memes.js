@@ -47,10 +47,8 @@ var injectMemes = function(names){//As JSON
                     </div>\
                 </div>\
             </div>');
-
-        //Add event listener
-        $('.voteBar button').on('click', function(){
-            console.log('DONE DID DOOTED');
-        });
     }
+    $('.voteBar button').on('click', function(){//One click handler per button
+        console.log('DONE DID DOOTED');
+    });
 }
