@@ -29,10 +29,17 @@ span{
     text-align: center;
 }
 .voteBar{
-    background-color: #555;
+    background-color: #133;/*7*/
     color:white;
-    height: 20px;
+    height: 1.5em;
+    display: table;
+    width: 100%;
+    padding-top: 0.25em;
 }
 .meme{
     margin: 20px 0px;
+}
+.voteBar a{
+    display: table-cell;
+    text-align: center;
 }
