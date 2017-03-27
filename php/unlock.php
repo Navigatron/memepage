@@ -22,13 +22,13 @@ if(!$response['success']){
     //Congrats, you get a cookie.
     //Good deal, use setcookie(); to set a cookie. Yes, it works over ajax.
     //Generate token
-    $token = openssl_random_pseudo_bytes(16);
+    $token = bin2hex(openssl_random_pseudo_bytes(16));//Yes, must be hex.
     $timestamp = time();
 
     //Store to DB
     define('PHPROOT', dirname(__DIR__).'/php/');
     require_once(PHPROOT.'ConnectToDatabase.php');
-    $sql = "INSERT INTO humans (token, timestamp) VALUES ($token, $timestamp)";
+    $sql = "INSERT INTO humans VALUES ($token, $timestamp)";
     $result = $DatabaseConnection->query($sql);
     print_r(get_defined_vars());
     $DatabaseConnection->close();
