@@ -6,6 +6,7 @@ var unlock = function(){
     $('#captchaBlock').hide();
     $('#uploadBlock').show();
     $('.voteBar').show();
+    voting=true;
 }
 $(document).ready(function(){
     $('#captchaForm').submit(function(event){
