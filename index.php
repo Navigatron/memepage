@@ -15,7 +15,7 @@
     <!--For showing memes, by freshness. TODO: decide on script based on php get-->
     <script src='js/memes.js'></script>
     <!--PHP puts a script here if the user is verified human.-->
-    <?php
+    <?php/*
     define('PHPROOT', dirname(__DIR__).'/php/');
     require_once(PHPROOT.'ReportErrors.php');
 
@@ -24,9 +24,9 @@
         //return;
     }else{
         require_once(PHPROOT.'verify.php');
-        $human = verify($_COOKIE['token']);
+        $human = verify($_COOKIE['token']);*/
         print_r(get_defined_vars());
-        if($human){
+        /*if($human){
             //ACTIVATE MORE_MAGIC
             /*
             echo <<<EOF
@@ -36,13 +36,13 @@
                     unlock();
                 });
             </script>
-EOF;//*/
+EOF;//
             //MORE_MAGIC de-activated.
             echo 'human';
         }else{
             echo 'not human';
         }
-    }
+    }*/
      ?>
 </head>
 <body>
