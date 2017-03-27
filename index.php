@@ -21,7 +21,14 @@
             require_once(dirname(__DIR__).'/html/php/verify.php');
             $result = verify($_COOKIE['token']);
             if($result){
-                echo 'Access granted';
+                //MORE_MAGIC
+                ?>
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        unlock();
+                    });
+                </script>
+                <?php
             }//*/
         }
      ?>
