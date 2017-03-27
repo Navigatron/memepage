@@ -20,6 +20,7 @@
     require_once(PHPROOT.'ReportErrors.php');
 
     if(!isset($_COOKIE['token'])){
+        echo 'no cookie';
         return;
     }else{
         require_once(PHPROOT.'verify.php');
@@ -27,6 +28,7 @@
         print_r(get_defined_vars());
         if($human){
             //ACTIVATE MORE_MAGIC
+            /*
             echo <<<EOF
             <script type="text/javascript">
                 $(document).ready(function(){
@@ -34,8 +36,11 @@
                     unlock();
                 });
             </script>
-EOF;
+EOF;//*/
             //MORE_MAGIC de-activated.
+            echo 'human';
+        }else{
+            echo 'not human';
         }
     }
      ?>
