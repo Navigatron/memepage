@@ -9,8 +9,7 @@ define('PHPROOT', dirname(__DIR__).'/php/');
 require_once(PHPROOT.'ReportErrors.php');
 
 //PRINT ABSOLUTELY EVERYTHING.
-$arr = get_defined_vars();
-print_r($arr);
+print_r(get_defined_vars());
 
 
 

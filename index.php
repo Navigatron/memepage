@@ -16,12 +16,15 @@
     <script src='js/memes.js'></script>
     <!--PHP puts a script here if the user is verified human.-->
     <?php
+    define('PHPROOT', dirname(__DIR__).'/php/');
+    require_once(PHPROOT.'ReportErrors.php');
+
     if(!isset($_COOKIE['token'])){
         return;
     }else{
-        define('PHPROOT', dirname(__DIR__).'/php/');
         require_once(PHPROOT.'verify.php');
         $human = verify($_COOKIE['token']);
+        print_r(get_defined_vars());
         if($human){
             //ACTIVATE MORE_MAGIC
             ?>
