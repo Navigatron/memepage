@@ -5,6 +5,7 @@ function verify($token){
     $expire = time()-60*60*24;//One day in the past
     $sql = "SELECT * FROM humans WHERE token='{$token}' AND time>'{$expire}'";
     $result = $DatabaseConnection->query($sql);
+    print_r(get_defined_vars());
     $DatabaseConnection->close();
     if ($result->num_rows > 0) {
         return true;
