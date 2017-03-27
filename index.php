@@ -19,7 +19,7 @@
         if(isset($_COOKIE['token'])){
             //Verify the token.
             define('PHPROOT', dirname(__DIR__).'/php/');
-            require_once(PHPROOT.'verify.php');
+            //require_once(PHPROOT.'verify.php');
             /*$result = verify($_COOKIE['token']);
             if($result){
                 echo 'Access granted';
