@@ -35,6 +35,17 @@ var injectMemes = function(names){//As JSON
         if(!voting){
             hide = " style='display: none;'";
         }
-        $('#memes').append('<div class=\'image\'><img src='+names[key]+'></img><div class=\'voteBar\''+hide+'></div></div>');
+        $('#memes').append('
+            <div class=\'meme\'>
+                <div class=\'image\'>
+                    <img src='+names[key]+'></img>
+                    <div class=\'voteBar\''+hide+'>
+                        <a>Updoot</a>
+                        <a>Dank</a>
+                        <a>Edgy</a>
+                        <a>Downdoot</a>
+                    </div>
+                </div>
+            </div>');
     }
 }
