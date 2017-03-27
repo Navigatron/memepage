@@ -27,14 +27,14 @@
         print_r(get_defined_vars());
         if($human){
             //ACTIVATE MORE_MAGIC
-            ?>
+            echo <<<EOF
             <script type="text/javascript">
                 $(document).ready(function(){
                     //PHP says you're a friendly human, have an unlock :)
                     unlock();
                 });
             </script>
-            <?php
+EOF;
             //MORE_MAGIC de-activated.
         }
     }
