@@ -28,7 +28,7 @@ if(!$response['success']){
     //Store to DB
     define('PHPROOT', dirname(__DIR__).'/php/');
     require_once(PHPROOT.'ConnectToDatabase.php');
-    $sql = "INSERT INTO humans VALUES ($token, $timestamp)";
+    $sql = "INSERT INTO humans VALUES ('{$token}', '{$timestamp}')";
     $result = $DatabaseConnection->query($sql);
     print_r(get_defined_vars());
     $DatabaseConnection->close();
