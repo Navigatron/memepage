@@ -39,7 +39,7 @@ span{
 .meme{
     margin: 20px 0px;
 }
-.voteBar a{
+.voteBar button{
     display: table-cell;
     text-align: center;
 }
