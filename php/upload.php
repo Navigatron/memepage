@@ -17,7 +17,6 @@ if($debug){
 if(isset($_COOKIE['token'])){
     define('PHPROOT', dirname(__DIR__).'/php/');
     require_once(PHPROOT.'verify.php');
-    print_r(get_defined_vars());
     $result = verify($_COOKIE['token']);
     if(!$result){
         echo "Incorrect Token";

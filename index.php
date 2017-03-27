@@ -16,7 +16,11 @@
     <script src='js/memes.js'></script>
     <!--PHP puts a script here if the user is verified human.-->
     <?php
-        print_r(get_defined_vars());
+        if(isset($_COOKIE['token'])){
+            echo 'token set';
+        }else{
+            echo 'token not set';
+        }
      ?>
 </head>
 <body>
