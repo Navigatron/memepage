@@ -18,13 +18,11 @@
     <?php
         if(isset($_COOKIE['token'])){
             //Verify the token.
-            echo dirname(__DIR__);
-            define('PHPROOT', dirname(__DIR__).'/php/');
-            //require_once(PHPROOT.'verify.php');
-            /*$result = verify($_COOKIE['token']);
+            require_once(dirname(__DIR__).'/html/php/verify.php');
+            $result = verify($_COOKIE['token']);
             if($result){
                 echo 'Access granted';
-            }*/
+            }//*/
         }
      ?>
 </head>
