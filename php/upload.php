@@ -1,5 +1,5 @@
 <?php
-$debug = false;
+$debug = true;
 $file = $_FILES['file'];
 $mimeType = mime_content_type($file['tmp_name']);
 
@@ -58,6 +58,10 @@ require_once(PHPROOT.'ConnectToDatabase.php');
 //Add to database
 $sql = "INSERT INTO media (id) VALUES (null)";//Auto-increments primary key
 $DatabaseConnection->query($sql);
+
+if($debug){
+    echo 'DB query went okay.';
+}
 
 //get name
 $sql = "SELECT LAST_INSERT_ID()";
