@@ -40,10 +40,10 @@ var injectMemes = function(names){//As JSON
                 <div class=\'image\'>\
                     <img src='+names[key]+'></img>\
                     <div class=\'voteBar\''+hide+'>\
-                        <a href=\'#\'>Updoot</a>\
-                        <a href=\'#\'>Dank</a>\
-                        <a href=\'#\'>Edgy</a>\
-                        <a href=\'#\'>Downdoot</a>\
+                        <button type=\'button\'>Updoot</button>\
+                        <button type=\'button\'>Dank</button>\
+                        <button type=\'button\'>Edgy</button>\
+                        <button type=\'button\'>Downdoot</button>\
                     </div>\
                 </div>\
             </div>');
