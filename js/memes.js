@@ -46,7 +46,6 @@ var injectMemes = function(names){//As JSON
                         <a href=\'#\'>Downdoot</a>\
                     </div>\
                 </div>\
-            </div>'\
-        );
+            </div>');
     }
 }
