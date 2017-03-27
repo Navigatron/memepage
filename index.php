@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <head>
+    <script type="text/javascript">
+        window.voting = false;
+    </script>
     <!--Generic Head data-->
     <?php include(dirname(__DIR__)."/html/php/head.php");?>
     <!--Specific styling for this page-->
