@@ -14,6 +14,28 @@
     <script src='js/upload.js'></script>
     <!--For showing memes, by freshness. TODO: decide on script based on php get-->
     <script src='js/memes.js'></script>
+    <!--PHP puts a script here if the user is verified human.-->
+    <?php
+    if(!isset($_COOKIE['token'])){
+        return;
+    }else{
+        define('PHPROOT', dirname(__DIR__).'/php/');
+        require_once(PHPROOT.'verify.php');
+        $human = verify($_COOKIE['token']);
+        if($human){
+            //ACTIVATE MORE_MAGIC
+            ?>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    //PHP says you're a friendly human, have an unlock :)
+                    unlock();
+                });
+            </script>
+            <?php
+            //MORE_MAGIC de-activated.
+        }
+    }
+     ?>
 </head>
 <body>
     <!--Header-->
