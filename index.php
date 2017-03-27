@@ -15,34 +15,8 @@
     <!--For showing memes, by freshness. TODO: decide on script based on php get-->
     <script src='js/memes.js'></script>
     <!--PHP puts a script here if the user is verified human.-->
-    <?php/*
-    define('PHPROOT', dirname(__DIR__).'/php/');
-    require_once(PHPROOT.'ReportErrors.php');
-
-    if(!isset($_COOKIE['token'])){
-        echo 'no cookie';
-        //return;
-    }else{
-        require_once(PHPROOT.'verify.php');
-        $human = verify($_COOKIE['token']);*/
+    <?php
         print_r(get_defined_vars());
-        /*if($human){
-            //ACTIVATE MORE_MAGIC
-            /*
-            echo <<<EOF
-            <script type="text/javascript">
-                $(document).ready(function(){
-                    //PHP says you're a friendly human, have an unlock :)
-                    unlock();
-                });
-            </script>
-EOF;//
-            //MORE_MAGIC de-activated.
-            echo 'human';
-        }else{
-            echo 'not human';
-        }
-    }*/
      ?>
 </head>
 <body>
