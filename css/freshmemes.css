@@ -1,9 +1,8 @@
 img{
-    max-width: 95%;
+    max-width: 100%;
     max-height: 95vh;
     display: block;
-    margin: 20px auto;
-    box-shadow: 0px 0px 8px -2px black;
+
 }
 span{
     display: block;
@@ -21,8 +20,16 @@ span{
     padding: 1px 10px;
 }
 .image{
-
+    display: block;
+    width: max-content;
+    max-width: 95%;
+    margin: 20px auto;
+    box-shadow: 0px 0px 8px -2px black;
+}
+#memes{
+    text-align: center;
 }
 .voteBar{
-    
+    background-color: #555;
+    height: 20px;
 }

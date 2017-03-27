@@ -1,6 +1,12 @@
 //We need to get the captcha code and send it to the server.
 //If the server is pleased, show the user the upload and vote features.
 var voting = false;
+var unlock = function(){
+    //Dear 1337 H4X0RZ, Just wanna let you know, uploading and voting don't work without the cookie from actually doing the captcha. ;)
+    $('#captchaBlock').hide();
+    $('#uploadBlock').show();
+    $('.voteBar').show();
+}
 $(document).ready(function(){
     $('#captchaForm').submit(function(event){
         //Don't actually submit the form.
@@ -39,10 +45,4 @@ $(document).ready(function(){
         //Even more not submitting the form.
         return false;
     });
-    var unlock = function(){
-        //Dear 1337 H4X0RZ, Just wanna let you know, uploading and voting don't work without the cookie from actually doing the captcha. ;)
-        $('#captchaBlock').hide();
-        $('#uploadBlock').show();
-        $('.voteBar').each().show();
-    }
 });
