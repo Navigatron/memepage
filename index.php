@@ -17,9 +17,13 @@
     <!--PHP puts a script here if the user is verified human.-->
     <?php
         if(isset($_COOKIE['token'])){
-            echo 'token set';
-        }else{
-            echo 'token not set';
+            //Verify the token.
+            define('PHPROOT', dirname(__DIR__).'/php/');
+            require_once(PHPROOT.'verify.php');
+            $result = verify($_COOKIE['token']);
+            if($result){
+                echo 'Access granted';
+            }
         }
      ?>
 </head>
