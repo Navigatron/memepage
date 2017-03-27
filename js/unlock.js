@@ -1,11 +1,12 @@
 //We need to get the captcha code and send it to the server.
 //If the server is pleased, show the user the upload and vote features.
 function unlock(){
+    window.voting = true;
     //Dear 1337 H4X0RZ, Just wanna let you know, uploading and voting don't work without the cookie from actually doing the captcha. ;)
     $('#captchaBlock').hide();
     $('#uploadBlock').show();
     $('.voteBar').show();
-    window.voting = true;
+
 }
 $(document).ready(function(){
     $('#captchaForm').submit(function(event){
