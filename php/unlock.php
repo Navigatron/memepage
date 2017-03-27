@@ -22,6 +22,7 @@ if(!$response['success']){
     //Congrats, you get a cookie.
     //Good deal, use setcookie(); to set a cookie. Yes, it works over ajax.
     //Set cookie
+    setcookie('human', 'true');
     echo 'true';
 }
 
