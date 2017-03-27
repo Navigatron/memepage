@@ -1,5 +1,5 @@
 <?php
-$debug = true;
+$debug = false;
 $file = $_FILES['file'];
 $mimeType = mime_content_type($file['tmp_name']);
 
@@ -53,7 +53,7 @@ if($file['size'] > 1000000){
 
 //Add the file to the database, get the files new name
 define('PHPROOT', dirname(__DIR__).'/php/');
-require_once(PHPROOT.'ConnectToDatabase.php');
+require(PHPROOT.'ConnectToDatabase.php');//We need a new one no matter what.
 
 //Add to database
 $sql = "INSERT INTO media (id) VALUES (null)";//Auto-increments primary key
