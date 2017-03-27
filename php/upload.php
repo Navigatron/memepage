@@ -12,6 +12,21 @@ if($debug){
 }
 
 //Verification
+
+//Humanity
+if(isset($_COOKIE['token'])){
+    define('PHPROOT', dirname(__DIR__).'/php/');
+    require_once(PHPROOT.'verify.php');
+    $result = verify($_COOKIE['token']);
+    if(!$result){
+        echo "Incorrect Token";
+        return;
+    }
+}else{
+    echo "You have not verified your humanity.";
+    return;
+}
+
 //File MIME-type
 switch($mimeType){
     case 'image/jpeg':

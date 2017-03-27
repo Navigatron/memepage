@@ -21,8 +21,18 @@ if(!$response['success']){
 }else{
     //Congrats, you get a cookie.
     //Good deal, use setcookie(); to set a cookie. Yes, it works over ajax.
-    //Set cookie
-    setcookie('human', 'true');
+    //Generate token
+    $token = openssl_random_pseudo_bytes(16);
+    $timestamp = time();
+
+    //Store to DB
+    define('PHPROOT', dirname(__DIR__).'/php/');
+    require_once(PHPROOT.'ConnectToDatabase.php');
+    $sql = "INSERT INTO humans (token, timestamp) VALUES ($token, $timestamp)";
+    $result = $DatabaseConnection->query($sql);
+    $DatabaseConnection->close();
+
+    setcookie('token', $token);
     echo 'true';
 }
 
