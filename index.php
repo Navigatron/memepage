@@ -17,6 +17,8 @@
     <script src='js/upload.js'></script>
     <!--For showing memes, by freshness. TODO: decide on script based on php get-->
     <script src='js/memes.js'></script>
+    <!--Enable voting on memes - 'dooting'-->
+    <script src='js/doot.js'></script>
     <!--PHP puts a script here if the user is verified human.-->
     <?php
         if(isset($_COOKIE['token'])){
