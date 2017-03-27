@@ -31,15 +31,27 @@ span{
 .voteBar{
     background-color: #133;/*7*/
     color:white;
-    height: 1.5em;
-    display: table;
+    height: 1.2em;
+    display: flex;
     width: 100%;
-    padding-top: 0.25em;
 }
 .meme{
     margin: 20px 0px;
 }
 .voteBar button{
-    display: table-cell;
+    display: inline-block;
     text-align: center;
+    flex-grow: 1;
+    background-color: #eee;
+    border: 1px solid #555;
+}
+.voteBar button:hover{
+    background-color: #fff;
+}
+.voteBar button:active{
+    background-color: #555;
+}
+.voteBar button:focus{
+    box-shadow: none;
+    border: 1px solid #555;
 }
