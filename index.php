@@ -21,7 +21,7 @@
 
     if(!isset($_COOKIE['token'])){
         echo 'no cookie';
-        return;
+        //return;
     }else{
         require_once(PHPROOT.'verify.php');
         $human = verify($_COOKIE['token']);
