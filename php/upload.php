@@ -33,6 +33,9 @@ switch($mimeType){
     case 'image/png':
     case 'image/gif':
     case 'image/tiff':
+    case 'image/x-icon':
+    case 'image/svg+xml':
+    case 'image/webp':
         if($debug){
             echo 'Got file, mimeType: '.$mimeType;
         }
