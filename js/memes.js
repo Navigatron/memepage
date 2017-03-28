@@ -39,16 +39,18 @@ var injectMemes = function(names){//As JSON
             <div class=\'meme\'>\
                 <div class=\'image\'>\
                     <img src='+names[key]+'></img>\
-                    <div class=\'voteBar\''+hide+'>\
-                        <button type=\'button\'>Updoot</button>\
-                        <button type=\'button\'>Dank</button>\
-                        <button type=\'button\'>Edgy</button>\
-                        <button type=\'button\'>Downdoot</button>\
+                    <div class=\'voteBar\''+hide+' data-key=\''+(key.split(',')[0])+'\'>\
+                        <button type=\'button\' data-voteType=\'0\'>Updoot</button>\
+                        <button type=\'button\' data-voteType=\'1\'>Dank</button>\
+                        <button type=\'button\' data-voteType=\'2\'>Edgy</button>\
+                        <button type=\'button\' data-voteType=\'3\'>Downdoot</button>\
                     </div>\
                 </div>\
             </div>');
     }
     $('.voteBar button').on('click', function(){//One click handler per button
-        console.log('DONE DID DOOTED');
+        var type = $(this).data('voteType');
+        var image = $(this).parent().data('key');
+        console.log('Got vote of type '+type+' on Image '+image+'.');
     });
 }
