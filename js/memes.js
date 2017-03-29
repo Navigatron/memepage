@@ -33,8 +33,32 @@ var loadmemes = function(index){
 }
 
 var injectMemes = function(names){//As JSON
-    if(names.length <20){
+    if(Object.keys(names).length <20){
         $('#moarMemesButton').text('No more memes :(');
+        $('#moarMemesButton').unbind();
+        $('#moarMemesButton').on('click', function(){
+            $('#moarMemesButton').text('I\'m sorry but its true, we\'re out of memes :,(');
+            $('#moarMemesButton').unbind();
+            $('#moarMemesButton').on('click', function(){
+                $('#moarMemesButton').text('No, really. That\'s all we\'ve got.');
+                $('#moarMemesButton').unbind();
+                $('#moarMemesButton').on('click', function(){
+                    $('#moarMemesButton').text('Stop clicking me.');
+                    $('#moarMemesButton').unbind();
+                    $('#moarMemesButton').on('click', function(){
+                        $('#moarMemesButton').text('Really. Stop.');
+                        $('#moarMemesButton').unbind();
+                        $('#moarMemesButton').on('click', function(){
+                            $('#moarMemesButton').text('You click me one more time and I\'ll disapear.');
+                            $('#moarMemesButton').unbind();
+                            $('#moarMemesButton').on('click', function(){
+                                $('#moarMemesButton').remove();
+                            })
+                        })
+                    })
+                })
+            })
+        })
     }
     for (var key in names) {
         var hide = '';
