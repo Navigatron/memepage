@@ -55,3 +55,10 @@ span{
     box-shadow: none;
     border: 1px solid #555;
 }
+#moarMemes{
+    text-align: center;
+}
+#moarMemesButton{
+    padding: 10px 50px;
+    margin: 20px;
+}

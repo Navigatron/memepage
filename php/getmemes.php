@@ -3,9 +3,7 @@ define('PHPROOT', dirname(__DIR__).'/php/');
 require_once(PHPROOT.'ReportErrors.php');
 
 if(!isset($_POST['index'])){
-    $arr = get_defined_vars();
-    print_r($arr);
-    echo '<br/>Lol';
+    echo 'Lol nice try h4x0r';
     return;
 }
 $index = $_POST['index'];
