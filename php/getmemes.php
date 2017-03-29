@@ -2,7 +2,7 @@
 define('PHPROOT', dirname(__DIR__).'/php/');
 require_once(PHPROOT.'ReportErrors.php');
 
-if(!isset($_POST['index'])){
+if(!isset($_POST['index']) || !is_numeric($_POST['index'])){//make sure its a number
     echo 'Lol nice try h4x0r';
     return;
 }
