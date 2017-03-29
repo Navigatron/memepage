@@ -33,6 +33,9 @@ var loadmemes = function(index){
 }
 
 var injectMemes = function(names){//As JSON
+    if(names.length <1){
+        $('#moarMemesButton').text('No more memes :(');
+    }
     for (var key in names) {
         var hide = '';
         if(!voting){
@@ -40,9 +43,9 @@ var injectMemes = function(names){//As JSON
         }
         var memeid = (names[key].split('.')[0].split('/')[1]);//After the / and before the .
         //Capture the smallest memeid
-        console.log('ID: '+memeid+', INDEX: '+smallestIndex);
-        if(smallestIndex==0 || memeid < smallestIndex){
-            console.log('UPDATING');
+        //console.log('ID: '+memeid+', INDEX: '+smallestIndex);
+        if(smallestIndex==0 || Number(memeid) < Number(smallestIndex)){
+            //console.log('UPDATING');
             smallestIndex = memeid;
         }
         $('#memes').append('\
