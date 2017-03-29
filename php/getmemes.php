@@ -12,7 +12,7 @@ $index = $_POST['index'];
 if($index==0){
     $sql = 'SELECT * FROM media ORDER BY id DESC LIMIT 20';
 }else{
-    $sql = 'SELECT * FROM media WHERE id<$index ORDER BY id DESC LIMIT 20';
+    $sql = 'SELECT * FROM media WHERE id<{'$index'} ORDER BY id DESC LIMIT 20';
 }
 
 require_once(PHPROOT.'ConnectToDatabase.php');
