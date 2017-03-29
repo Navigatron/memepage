@@ -16,7 +16,7 @@ if($index==0){
 require_once(PHPROOT.'ConnectToDatabase.php');
 $result = $DatabaseConnection->query($sql);
 $names = array();
-print_r(get_defined_vars());
+//print_r(get_defined_vars());
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {//WHERE THE KEYS FOR ROW ARE THE COLUMN NAMES
         $glob = glob(dirname(__DIR__).'/media/'.$row['id'].'.*');
