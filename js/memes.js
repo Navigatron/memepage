@@ -33,7 +33,7 @@ var loadmemes = function(index){
 }
 
 var injectMemes = function(names){//As JSON
-    if(names.length <1){
+    if(names.length <20){
         $('#moarMemesButton').text('No more memes :(');
     }
     for (var key in names) {
@@ -61,6 +61,7 @@ var injectMemes = function(names){//As JSON
                 </div>\
             </div>');//Use lower case for data.
     }
+    $('.voteBar button').unbind();
     $('.voteBar button').on('click', function(){//One click handler per button
         var type = $(this).data('votetype');
         var image = $(this).parent().data('key');
