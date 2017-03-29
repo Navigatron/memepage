@@ -65,6 +65,9 @@
         <!--Memes-->
         <div id='memes'>
         </div>
+        <div id='moarMemes'>
+            <button id='moarMemesButton' type="button" name="button">Moar Memes</button>
+        </div>
     </div>
 </body>
 </html>

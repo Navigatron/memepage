@@ -3,6 +3,9 @@ var smallestIndex = 0;//Represents the oldest meme. Passed to the server to get 
 $(document).ready(function(){
     //Automatically load 20 memes.
     loadmemes(smallestIndex);
+    $('#moarMemesButton').on('click', function(){
+        loadmemes(smallestIndex);
+    })
 });
 
 
@@ -35,11 +38,16 @@ var injectMemes = function(names){//As JSON
         if(!voting){
             hide = " style='display: none;'";
         }
+        var memeid = (names[key].split('.')[0].split('/')[1]);//After the / and before the .
+        //Capture the smallest memeid
+        if(smallestIndex==0 || memeid < smallestIndex){
+            smallestIndex = memeid;
+        }
         $('#memes').append('\
             <div class=\'meme\'>\
                 <div class=\'image\'>\
                     <img src='+names[key]+'></img>\
-                    <div class=\'voteBar\''+hide+' data-key=\''+(names[key].split('.')[0].split('/')[1])+'\'>\
+                    <div class=\'voteBar\''+hide+' data-key=\''+memeid+'\'>\
                         <button type=\'button\' data-votetype=\'0\'>Updoot</button>\
                         <button type=\'button\' data-votetype=\'1\'>Dank</button>\
                         <button type=\'button\' data-votetype=\'2\'>Edgy</button>\
