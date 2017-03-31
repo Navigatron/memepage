@@ -24,13 +24,13 @@ if(!$response['success']){
     //Store to DB
     define('PHPROOT', dirname(__DIR__).'/php/');
     require_once(PHPROOT.'ConnectToDatabase.php');
-    $sql = "INSERT INTO humans VALUES ('{$token}', '{$timestamp}')";
+    $sql = "INSERT INTO humans (`token`,`time`) VALUES ('{$token}', '{$timestamp}')";
     $result = $DatabaseConnection->query($sql);
     //print_r(get_defined_vars());//There can be no output before SETCOOKIE or SETCOOKIE will have no effect.
     $DatabaseConnection->close();
 
     setcookie('token', $token, time()+60*60*24*365*10, '/');//User ID cookie expires in 10 years
-    print_r(get_defined_vars());
+    //print_r(get_defined_vars());
     echo 'true';
 }
 
