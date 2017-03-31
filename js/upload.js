@@ -30,7 +30,7 @@ $(document).ready(function(){
                 control.replaceWith( control = control.clone( true ) );
                 //Clear loaded memes, re-load memes.
                 $('#memes').empty();
-                loadmemes();
+                loadmemes(0);
             } else {
                 alert('POST failure. Code: '+xhr.status);
                 $('#UploadMessage').text($('#UploadMessage').text()+'POST request failure.');

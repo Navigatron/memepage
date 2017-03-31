@@ -2,7 +2,7 @@ var smallestIndex = 0;//Represents the oldest meme. Passed to the server to get 
 
 $(document).ready(function(){
     //Automatically load 20 memes.
-    loadmemes(smallestIndex);
+    loadmemes(0);//Refresh, reload, visit page - always start from zero
     $('#moarMemesButton').on('click', function(){
         loadmemes(smallestIndex);
     })
@@ -11,6 +11,9 @@ $(document).ready(function(){
 
 
 var loadmemes = function(index){
+    if (typeof index == 'undefined'){
+        console.error('Cannot load an undefined amount of memes!');
+    }
     //Firstly, get the meme file names from the server.
     //POST REQUEST.
     var formData = new FormData();
