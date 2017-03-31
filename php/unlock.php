@@ -30,6 +30,7 @@ if(!$response['success']){
     $DatabaseConnection->close();
 
     setcookie('token', $token, time()+60*60*24*365*10, '/');//User ID cookie expires in 10 years
+    print_r(get_defined_vars());
     echo 'true';
 }
 
