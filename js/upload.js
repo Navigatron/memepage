@@ -2,8 +2,6 @@ $(document).ready(function(){
     $('#upload').on('click', function(e){
         var file = $('#file')[0].files[0];
 
-        //TODO - clear the file button so the upload button cannot be spammed.
-
         // Check the file type.
         if (!file.type.match('image.*')) {
             $('#UploadMessage').text($('#UploadMessage').text()+'That\'s Not an Image!');
@@ -27,7 +25,7 @@ $(document).ready(function(){
                 $('#UploadMessage').text($('#UploadMessage').text()+xhr.responseText);
                 //Clear file button - taken right from stack overflow.
                 var control = $('#file');
-                control.replaceWith( control = control.clone( true ) );
+                control.replaceWith( control = control.clone( true ) );//TODO this is ineffective
                 //Clear loaded memes, re-load memes.
                 $('#memes').empty();
                 loadmemes(0);
